@@ -60,4 +60,9 @@ typings/
 .env
 
 
-
+.merlin
+/lib/
+.next/
+__snapshots__
+/src/**/*.js
+/__tests__/**/*.js

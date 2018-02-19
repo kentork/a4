@@ -1,0 +1,45 @@
+{
+  "name": "a4",
+  "description": "knowledge platform",
+  "author": "kentork",
+  "license": "MIT",
+  "version": "0.1.0",
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
+    "micro": "^9.1.0",
+    "micro-route": "^2.5.0",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.1.6"
+  },
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "build": "run-s bs:build next:build",
+    "next:build": "next build src",
+    "gql:init": "prisma init schema",
+    "gql:deploy": "cd schema && prisma deploy",
+    "gql:fetch": "send-introspection-query",
+    "bs:build": "bsb -make-world",
+    "bs:start": "bsb -make-world -w",
+    "bs:clean": "bsb -clean-world",
+    "jest:run": "jest",
+    "jest:snapshot": "jest --updateSnapshot",
+    "retyped": "retyped --",
+    "test": "run-s bs:build jest:run",
+    "test:snapshot": "run-s bs:build jest:snapshot"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.2",
+    "@types/url-parse": "^1.1.0",
+    "bs-platform": "^2.2.1",
+    "bs-react-test-renderer": "^2.0.0",
+    "cross-env": "^5.1.3",
+    "graphql_ppx": "^0.2.0",
+    "jest": "^22.3.0",
+    "npm-run-all": "^4.1.2",
+    "reason-react": "^0.3.2",
+    "reasonably-typed": "^0.13.0"
+  }
+}

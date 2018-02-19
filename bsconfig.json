@@ -1,0 +1,26 @@
+{
+  "name": "a4",
+  "version": "0.1.0",
+  "sources": [{
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "subdirs": true,
+      "type": "dev"
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".js",
+  "bs-dependencies": ["reason-react"],
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-react-test-renderer"],
+  "reason": {
+    "react-jsx": 2
+  },
+  "namespace": true,
+  "refmt": 3
+}
